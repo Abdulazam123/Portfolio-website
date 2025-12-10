@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>One-Page Website Assignment</title>
+  <style>
+    /* Tiny inline styles so it looks okay without separate CSS */
+    body { font-family: Arial, sans-serif; line-height:1.5; margin:0; padding:0; }
+    header, nav, section, footer { padding:20px; }
+    nav { background:#f0f0f0; position:sticky; top:0; z-index:100; }
+    nav a { margin-right:12px; text-decoration:none; color:#333; }
+    .section { padding:60px 20px; border-bottom:1px solid #eee; }
+    .images img { max-width:100%; height:auto; display:block; margin-bottom:10px; }
+    .contact-form input, .contact-form textarea { display:block; width:100%; max-width:400px; margin-bottom:8px; padding:8px; }
+    footer { background:#222; color:#fff; text-align:center; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION - uses bookmarks to jump to page sections -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#pictures">Pictures</a>
+    <a href="#video">Video</a>
+    <a href="#contact">Contact</a>
+    <a href="#footer">Footer</a>
+  </nav>
+
+  <!-- HOME SECTION -->
+  <section id="home" class="section">
+    <h1>Welcome to My One-Page Website</h1>
+    <p>This is the home section. Write a short intro about yourself or the page purpose here. Example: "I’m learning web design and this is my assignment."</p>
+  </section>
+
+  <!-- PICTURES SECTION -->
+  <section id="pictures" class="section images">
+    <h2>Pictures</h2>
+    <p>Below are example pictures. Replace the src values with your own images if you have them (e.g. images/photo1.jpg).</p>
+
+    <!-- Example placeholder images; replace with: src="images/yourphoto.jpg" -->
+    <img src="https://via.placeholder.com/600x350?text=Photo+1" alt="Photo 1">
+    <img src="https://via.placeholder.com/600x350?text=Photo+2" alt="Photo 2">
+  </section>
+
+  <!-- VIDEO SECTION -->
+  <section id="video" class="section">
+    <h2>Video</h2>
+    <p>Embedded YouTube video below (use any youtube link, this one is an example):</p>
+
+    <!-- iframe embed of a YouTube video -->
+    <div style="max-width:800px">
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="Example Video" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM SECTION -->
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <p>Fill out this contact form. (Note: without a server the form will not actually send — read notes below for demo options.)</p>
+
+    <form class="contact-form" action="#" method="post">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" placeholder="Your name" required>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Your message"></textarea>
+
+      <input type="submit" value="Send Message">
+    </form>
+    <p><small>Tip: This form uses action="#" so it won’t submit anywhere. To actually receive messages you'd need a server or a form service (your instructor may cover this later).</small></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <p>&copy; <span id="year"></span> Your Name. Assignment: One-Page Website.</p>
+  </footer>
+
+  <script>
+    // small JS to set the year automatically (not required by your assignment, optional)
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
