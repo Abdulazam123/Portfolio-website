@@ -1,22 +1,26 @@
 
-# My Portfolio Website
+# Portfolio Website
 
-This portfolio was created for my HTML and CSS course.
+This is my upgraded portfolio website built using HTML, CSS, and JavaScript.
 
-## Projects Included
+## About This Project
+This portfolio was originally created for my HTML and CSS course and later upgraded for my JavaScript course.  
+It includes interactive features implemented using JavaScript.
 
-- *Project 1:* Short description of what it is.
-- *Project 2:* Short description.
-- *Project 3:* Short description.
+## Features
+- One-page responsive portfolio design
+- Image gallery with JavaScript lightbox modal
+- Keyboard controls (Next, Previous, ESC)
+- Clean and modern UI
+- Deployed live using GitHub Pages
 
 ## Technologies Used
-
 - HTML
 - CSS
+- JavaScript
 
-## How to View
-
-This site is deployed using GitHub Pages:  
-<YOUR LIVE URL WILL GO HERE ONCE WE SET IT UP>
 ## Live Website
 https://abdulazam123.github.io/Portfolio-website/
+
+## Repository
+This repository contains the complete source code for my portfolio website, including all HTML, CSS, JavaScript, and image assets.
