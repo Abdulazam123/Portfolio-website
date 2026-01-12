@@ -1,85 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Bootstrap Website</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One-Page Website</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">MySite</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <!-- NAV -->
+  <header class="header">
+    <div class="container nav">
+      <h1 class="logo">My One-Page Site</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="bg-primary text-white text-center py-5">
-        <div class="container">
-            <h1>Welcome to My Bootstrap Website</h1>
-            <p class="lead">This is a simple responsive website using Bootstrap 5.</p>
-            <a href="#" class="btn btn-light btn-lg mt-3">Get Started</a>
-        </div>
-    </section>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <h2>Welcome 👋</h2>
+      <p>This is my one-page website project. It includes a functional lightbox (modal image gallery).</p>
+      <a class="btn" href="#gallery">View Gallery</a>
+    </div>
+  </section>
 
-    <!-- Content Section -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Feature 1</h5>
-                            <p class="card-text">This is a brief description of Feature 1.</p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Feature 2</h5>
-                            <p class="card-text">This is a brief description of Feature 2.</p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Feature 3</h5>
-                            <p class="card-text">This is a brief description of Feature 3.</p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About</h2>
+      <p>
+        This project is made with HTML, CSS, and JavaScript. The gallery below opens images in a lightbox modal.
+      </p>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-        <div class="container">
-            <p>&copy; 2025 MySite. All rights reserved.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>HTML</h3>
+          <p>Structure of the page</p>
         </div>
-    </footer>
+        <div class="card">
+          <h3>CSS</h3>
+          <p>Styling and layout</p>
+        </div>
+        <div class="card">
+          <h3>JavaScript</h3>
+          <p>Lightbox modal + interactions</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- GALLERY -->
+  <section id="gallery" class="section alt">
+    <div class="container">
+      <h2>Gallery (Click an image)</h2>
+      <p class="muted">Click any image to open the lightbox. Use Next/Prev or arrow keys. Press ESC to close.</p>
+
+      <div class="gallery-grid">
+        <!-- Update image names if yours are different -->
+        <img class="thumb" src="images/img1.jpg" alt="Gallery image 1" data-index="0">
+        <img class="thumb" src="images/img2.jpg" alt="Gallery image 2" data-index="1">
+        <img class="thumb" src="images/img3.jpg" alt="Gallery image 3" data-index="2">
+        <img class="thumb" src="images/img4.jpg" alt="Gallery image 4" data-index="3">
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Demo contact form (no backend required).</p>
+
+      <form class="form" onsubmit="return false;">
+        <label>
+          Name
+          <input type="text" placeholder="Your name" required>
+        </label>
+
+        <label>
+          Email
+          <input type="email" placeholder="you@example.com" required>
+        </label>
+
+        <label>
+          Message
+          <textarea rows="4" placeholder="Write a message..." required></textarea>
+        </label>
+
+        <button class="btn" type="submit">Send</button>
+      </form>
+
+      <footer class="footer">
+        <p class="muted">© 2026 My One-Page Website</p>
+      </footer>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" id="backdrop"></div>
+
+    <div class="lightbox-content" role="dialog" aria-modal="true" aria-label="Image lightbox">
+      <button class="icon-btn close" id="closeBtn" aria-label="Close (Esc)">✕</button>
+
+      <button class="icon-btn prev" id="prevBtn" aria-label="Previous image">‹</button>
+
+      <img id="lightboxImage" src="" alt="Expanded view">
+
+      <button class="icon-btn next" id="nextBtn" aria-label="Next image">›</button>
+
+      <div class="lightbox-caption">
+        <span id="captionText"></span>
+        <span class="counter" id="counterText"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
 
